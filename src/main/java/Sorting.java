@@ -32,7 +32,17 @@ public class Sorting {
      */
     @SuppressWarnings("unused")
     private static int[] bubbleSort(final int[] array) {
-        return null;
+        int[] array1 = array;
+        for (int i = 1; i < array1.length; i++) {
+            for (int j = 1; j < array1.length - i + 1; j++) {
+                if (array1[j] < array1[j - 1]) {
+                    int temp = array1[j];
+                    array1[j] = array1[j - 1];
+                    array1[j - 1] = temp;
+                }
+            }
+        }
+        return array1;
     }
 
     /**
